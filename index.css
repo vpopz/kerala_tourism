@@ -1,0 +1,56 @@
+*{
+    padding:0;
+    margin: 0;
+}
+ /* header */ 
+.navbar li{
+    border:1px solid white;
+    margin:5px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+} 
+
+.navbar li:hover{ 
+    background-color:white;
+    transition: .2s ease-in-out;
+} 
+
+.container{
+    padding:10px;
+}
+
+body{
+    background-image: url(./images/bg.jpg);
+    background-size: cover;
+}
+
+.intro_para{
+    text-align: justify;
+    text-justify:inter-word ;
+
+}
+
+.card-text{
+    text-align: justify;
+    text-justify:inter-word ;
+
+}
+
+.cont{
+    background-color: dimgrey;
+    padding:10px;
+} 
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(32, 220, 63);
+    color: rgb(10, 10, 10);
+    width:100%
+}
+
+
+
+

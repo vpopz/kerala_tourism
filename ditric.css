@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.p_name{
+    text-align:justify;
+    text-justify:inter-word;
+}
+
+.dis a{
+    text-decoration: none;
+}
+
+.dis{
+    padding:5px;
+}
+
+footer{
+    background-color: darkgreen;
+    color: white;
+}

@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin-top: 80px;
+}
+
+.container h1{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.container p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+#para{
+    margin-top: 50px;
+}
+
+
+
+.dis a{
+    text-decoration: none;
+    color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer {
+    text-align: center;
+    padding: 4px;
+    background-color: rgb(32, 220, 63);
+    color: rgb(10, 10, 10);
+    width:100%;
+    height:30px;
+}
+
+

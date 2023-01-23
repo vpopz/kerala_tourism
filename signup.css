@@ -1,0 +1,40 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-image: url(./images/cover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.container{
+    margin-top: 50px;
+}
+
+form{
+    padding:20px 10px 10px 10px;
+    color: bisque;
+}
+.alog a{
+    color:yellow;
+    text-decoration: none;
+}
+
+form button{
+    width:40%;
+    opacity: 70%;
+}
+form button:hover{
+    opacity: 100%;
+}
+
+footer {
+    text-align: center;
+    height:25px;
+    padding-bottom: 1px;
+    background-color: darkgreen;
+    color: rgb(10, 10, 10);
+    width:100%
+}
