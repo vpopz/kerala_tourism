@@ -8,9 +8,13 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     
+    
 }
 .container{
-    margin-top: 50px;
+    margin-top: 40px;
+}
+.alog p{
+    font-size: smaller;
 }
 
 form{
@@ -34,7 +38,7 @@ footer {
     text-align: center;
     height:25px;
     padding-bottom: 1px;
-    background-color: darkgreen;
+    background-color: rgb(20, 116, 70);
     color: rgb(10, 10, 10);
     width:100%
 }

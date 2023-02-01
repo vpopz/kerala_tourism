@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-success">
+        <nav class="navbar navbar-expand-lg  bg-success">
             <div class="container-fluid">
               <div>
                 <img class="d-flex ms-4" src="./images/logo.png" alt="not loading">
@@ -39,53 +39,55 @@
           </nav>
         </header>
 
-    <div class="container mx-auto bg-dark p-5 " style="max-width: 800px;">
-        <form class="row g-3">
-            <div class="mb-1 d-flex justify-content-center"><h4>SIGNUP</h4>
+    <div class="container mx-auto bg-dark p-4 " style="max-width: 500px;">
+        <form action="login.html" class="row ">
+            <div class="mb-1 d-flex justify-content-center"><h4 style="color: rgb(54, 203, 121);">SIGNUP</h4>
             </div>
             <div class="alog mb-3 d-flex justify-content-end"><p>Already have an account? <a href="login.html">Login</a></p> </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
           <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" aria-label="First name">
+            <input type="text" class="form-control" id="firstname" onkeyup="return firstName()" aria-label="First name"><span id="fnAlert"></span>
           </div>
-          <div class="col-md-5 ">
-          <label for="last name" class="form-label">Last Name</label>
-            <input type="text" class="form-control" aria-label="Last name">
+          <div class="col-md-6" >
+          <label  for="last name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname" onkeyup="return lastName()" aria-label="Last name"><span id="lnAlert"></span>
           </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <input type="text" class="form-control" id="inputEmail4" onkeyup="return emailId()"><span id="mailAlert"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label class="form-label" for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" data-mdb-input-mask="+91" placeholder="+91"/>
+                <input type="tel" id="phone" class="form-control"  onkeyup="return phoneNumber()" data-mdb-input-mask="+91" placeholder="XXX XXX XXXX"/><span id="pnAlert"></span>
               </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" placeholder="must be 8-20 long. characters" id="inputPassword4">
+              <input type="password" class="form-control"  placeholder="must be 8-20 characters" id="inputPassword4" onkeyup="return password()"><span id="pAlert"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="password" class="form-control" id="inputPassword" onkeyup="return confirmPassword()"><span id="cpAlert"></span>
           </div>
       
             <div class="col-12 mb-5">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
+              <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="gridCheck" onsubmit="return checkBox()">
                 <label class="form-check-label" for="gridCheck">
                   I have read and agree to the privacy policy
                 </label>
               </div>
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-success">Sign in</button>
+            <div class="col-12 d-flex justify-content-center">
+              <button type="submit" class="btn btn-success "  onclick="return signIn()">Sign in</button><span id="bttn"></span>
             </div>
           </form>
           </div>
-
-      <footer class="mt-3">
+          <script src="signupScript.js"></script>
+      <footer class="mt-5">
             <p class="foot">copyright @ 2023</p>
           </footer>
+
+          
     
 </body>
 </html>

@@ -44,21 +44,22 @@
   <div class="row">
     <div class="col d-flex justify-content-center mb-4"><h1><i>Welcome to Kerala tourism</i> </h1></div>
   </div>
-  <form>
-    <div class="mb-3">
+  <form action="districts.html">
+    <div class="mb-1">
       <label for="exampleInputEmail1" class="form-label"><b>Email address</b></label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <input type="email" class="form-control" placeholder="enter registered email" id="exampleInputEmail1" onkeyup="return emailValid()" aria-describedby="emailHelp">
+      <span id="emailAlert"></span>
   </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" class="form-control" placeholder="8-20 characters" id="exampleInputPassword1" onkeyup="return passwordValid()">
+      <span id="passwordAlert" ></span>
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input type="checkbox" onsubmit="return checkBox()" class="form-check-input" id="exampleCheck1"><span id="cbox"></span>
       <label class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
-    <button type="submit" class="btn btn-primary">Login</button><br><br>
+    <button type="submit" onclick="return validate()"  class="btn btn-primary">Login</button><span id="btnAlert"></span><br><br>
     <a id="anc" href="signup.html">Create an account?</a><br>
     <a id="anc" href="#">forgot Password</a>
 
@@ -66,6 +67,7 @@
   
 </div>
 </div>
+<script src="loginScript.js"></script>
 
 <footer class="d-flex justify-content-center bg-success" style=" position: relative;">
   <p class="foot">copyright @ 2023</p>
