@@ -16,7 +16,6 @@ var pnRegex =  /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g;
 
 var pw  = document.getElementById("inputPassword4");
 var pwa = document.getElementById("pAlert");
-var pwa1 = document.getElementById("pAlert2");
 var passRegex= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/g;
 
 var cpw = document.getElementById("inputPassword");
@@ -28,8 +27,6 @@ var btn = document.getElementById('bttn');
 
 
 function firstName(){
-
-
      if(!fn.value.match(fnRegex)){
         fna.innerHTML="Invalid Format! only Alphabets";
         fna.style.color='red';
@@ -63,7 +60,6 @@ function phoneNumber(){
         pna.style.color='green';
         return true;
     }
-
 }
 
 function emailId(){
@@ -86,14 +82,13 @@ function password(){
     }else{
         if(pw.value.length<9){
             pwa.innerHTML="Poor";
-            pwa.style.color="red"
+            pwa.style.color="red";
         }else if (pw.value.length <14) {
-            pwa.innerHTML="intermediate"
-            pwa.style.color="orange"
+            pwa.innerHTML="intermediate";
+            pwa.style.color="orange";
         }else{
-            pwa.innerHTML="Strong"
-            pwa.style.color="green"
-
+            pwa.innerHTML="Strong";
+            pwa.style.color="green";
         }
         return true;
     }}
@@ -120,7 +115,6 @@ function confirmPassword(){
         cpwa.style.color='green';
         return true;
     }
-
 }
 
 function checkBox(){
@@ -137,8 +131,6 @@ function signIn(){
         btn.innerHTML="Incomplete";
         return false;
     }else{
-
         return true;
     };
-
 };
