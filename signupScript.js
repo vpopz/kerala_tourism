@@ -16,6 +16,7 @@ var pnRegex =  /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g;
 
 var pw  = document.getElementById("inputPassword4");
 var pwa = document.getElementById("pAlert");
+var pwa1 = document.getElementById("pAlert2");
 var passRegex= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/g;
 
 var cpw = document.getElementById("inputPassword");
@@ -26,17 +27,15 @@ var cb = document.getElementById('gridCheck');
 var btn = document.getElementById('bttn');
 
 
-
-
-
 function firstName(){
-    if(!fn.value.match(fnRegex)){
-        fna.innerHTML='Invalid Format'
+
+
+     if(!fn.value.match(fnRegex)){
+        fna.innerHTML="Invalid Format! only Alphabets";
         fna.style.color='red';
         return false;
-    }
-    else{
-        fna.innerHTML="valid";
+    }else{
+        fna.innerHTML="Valid";
         fna.style.color='green';
         return true;
     };
@@ -44,7 +43,7 @@ function firstName(){
 
 function lastName(){
     if(!ln.value.match(lnRegex)){
-        lna.innerHTML="Invalid Format";
+        lna.innerHTML="Invalid Format! only Alphabets ";
         lna.style.color='red';
         return false;
     }else{
@@ -56,11 +55,11 @@ function lastName(){
 
 function phoneNumber(){
     if(!pn.value.match(pnRegex)){
-        pna.innerHTML='invalid Format';
+        pna.innerHTML='Invalid Format - enter a valid number';
         pna.style.color='red';
         return false;
     }else{
-        pna.innerHTML='valid';
+        pna.innerHTML='Valid';
         pna.style.color='green';
         return true;
     }
@@ -73,7 +72,7 @@ function emailId(){
         ma.style.color='red';
         return false;
     }else{
-        ma.innerHTML="valid";
+        ma.innerHTML="Valid";
         ma.style.color='green';
         return true;
     }
@@ -81,23 +80,43 @@ function emailId(){
 
 function password(){
     if(!pw.value.match(passRegex)){
-        pwa.innerHTML='invalid Format';
+        pwa.innerHTML='Invalid Format! must contain atleast one uppercase,lowercase,and a number';
         pwa.style.color='red';
         return false;
     }else{
-        pwa.innerHTML="valid";
-        pwa.style.color='green';
+        if(pw.value.length<9){
+            pwa.innerHTML="Poor";
+            pwa.style.color="red"
+        }else if (pw.value.length <14) {
+            pwa.innerHTML="intermediate"
+            pwa.style.color="orange"
+        }else{
+            pwa.innerHTML="Strong"
+            pwa.style.color="green"
+
+        }
         return true;
-    };
-};
+    }}
+
+    function togglePasswordVisibility() {
+        let passwordIcon = document.querySelector(".view-password");
+      
+        if (pw.type === "password") {
+          pw.type = "text";
+          passwordIcon.innerHTML = "🔓";
+        } else {
+          pw.type = "password";
+          passwordIcon.innerHTML = "🔒";
+        }
+      }
 
 function confirmPassword(){
     if(cpw.value != pw.value){
-        cpwa.innerHTML='invalid Format';
+        cpwa.innerHTML='Not matching';
         cpwa.style.color='red';
         return false;
     }else{
-        cpwa.innerHTML='valid';
+        cpwa.innerHTML='Matching';
         cpwa.style.color='green';
         return true;
     }
@@ -114,7 +133,7 @@ function checkBox(){
 };
 
 function signIn(){
-    if(!firstName()|| !lastName() || !emailId() || !phoneNumber() || !password() || !confirmPassword() || !checkBox()){
+    if(!firstName()|| !lastName() || !emailId() || !phoneNumber() || !confirmPassword() || !checkBox() || !password() ){
         btn.innerHTML="Incomplete";
         return false;
     }else{

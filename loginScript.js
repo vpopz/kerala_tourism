@@ -4,7 +4,7 @@ var mailRegex= /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 var password = document.getElementById('exampleInputPassword1');
 var pa = document.getElementById('passwordAlert');
-var passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+var passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
 
 var ba = document.getElementById('btnAlert');
 
@@ -15,7 +15,7 @@ var ba = document.getElementById('btnAlert');
 
 function emailValid(){
     if(!email.value.match(mailRegex)){
-        ea.innerHTML="Invalid Format ❌ ";
+        ea.innerHTML="Invalid Format";
         ea.style.color='red';
         return false;
     }else{
@@ -26,7 +26,7 @@ function emailValid(){
 
 function passwordValid(){
     if(!password.value.match(passRegex)){
-        pa.innerHTML="Invalid Format ❌";
+        pa.innerHTML="Invalid Format";
         pa.style.color="red";
         return false;
     }else{

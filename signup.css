@@ -37,8 +37,15 @@ form button:hover{
 footer {
     text-align: center;
     height:25px;
-    padding-bottom: 1px;
+    padding-bottom: 2px;
     background-color: rgb(20, 116, 70);
     color: rgb(10, 10, 10);
     width:100%
+}
+
+.view-password {
+    cursor: pointer;
+}
+#pAlert{
+    margin-left: 20px;
 }

@@ -39,34 +39,34 @@
           </nav>
         </header>
 
-    <div class="container mx-auto bg-dark p-4 " style="max-width: 500px;">
+    <div class="container mx-auto bg-dark p-4  " style="max-width: 800px;">
         <form action="login.html" class="row ">
             <div class="mb-1 d-flex justify-content-center"><h4 style="color: rgb(54, 203, 121);">SIGNUP</h4>
             </div>
             <div class="alog mb-3 d-flex justify-content-end"><p>Already have an account? <a href="login.html">Login</a></p> </div>
           <div class="col-md-6">
           <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstname" onkeyup="return firstName()" aria-label="First name"><span id="fnAlert"></span>
+            <input type="text" class="form-control mb-2" id="firstname" onkeyup="return firstName()" placeholder="4-20 letters" aria-label="First name"><span id="fnAlert"></span>
           </div>
           <div class="col-md-6" >
           <label  for="last name" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastname" onkeyup="return lastName()" aria-label="Last name"><span id="lnAlert"></span>
+            <input type="text" class="form-control mb-2" id="lastname" onkeyup="return lastName()" placeholder="1-10 letters" aria-label="Last name"><span id="lnAlert"></span>
           </div>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="text" class="form-control" id="inputEmail4" onkeyup="return emailId()"><span id="mailAlert"></span>
+              <input type="text" class="form-control mb-2" id="inputEmail4" onkeyup="return emailId()"><span id="mailAlert"></span>
             </div>
             <div class="col-md-6">
                 <label class="form-label" for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control"  onkeyup="return phoneNumber()" data-mdb-input-mask="+91" placeholder="XXX XXX XXXX"/><span id="pnAlert"></span>
+                <input type="tel" id="phone" class="form-control mb-2"  onkeyup="return phoneNumber()" data-mdb-input-mask="+91" placeholder="XXX XXX XXXX"/><span id="pnAlert"></span>
               </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control"  placeholder="must be 8-20 characters" id="inputPassword4" onkeyup="return password()"><span id="pAlert"></span>
+              <input type="password" class="form-control mb-2"  placeholder="must be 8-20 characters" id="inputPassword4" onkeyup="return password()"><span class="view-password" onclick="togglePasswordVisibility()">🔒</span><span id="pAlert"></span>
             </div>
             <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="inputPassword" onkeyup="return confirmPassword()"><span id="cpAlert"></span>
+            <input type="password" class="form-control mb-2" id="inputPassword" placeholder="Re-enter password" onkeyup="return confirmPassword()"><span id="cpAlert"></span>
           </div>
       
             <div class="col-12 mb-5">
@@ -83,7 +83,7 @@
           </form>
           </div>
           <script src="signupScript.js"></script>
-      <footer class="mt-5">
+      <footer class="mt-3">
             <p class="foot">copyright @ 2023</p>
           </footer>
 
