@@ -11,7 +11,7 @@ body{
     
 }
 .container{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .alog p{
     font-size: smaller;
@@ -36,8 +36,8 @@ form button:hover{
 
 footer {
     text-align: center;
-    height:25px;
-    padding-bottom: 2px;
+    height:29px;
+    padding-bottom: 1px;
     background-color: rgb(20, 116, 70);
     color: rgb(10, 10, 10);
     width:100%
